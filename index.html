@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body onload="initGame()" oncontextmenu="return false;">
+    <h1>Mine Sweeper</h1>
+    <div class="menu">
+        <h2><button onclick="initGame()"><img class="smileyButton" src="./img/smiling.png"></button></h2>
+        <h3 class="score">Score : <span>0</span></h3>
+        <h3 class="timer">Timer : <span id="minutes">00</span>:<span id="seconds">00</span></h3>
+        <h3 class="flagsCount">Flags : <span>0</span></h3>
+        <h3 class="hints">Hints : 
+            <span><button onclick="getHint()">💡</button></span>
+            <span><button onclick="getHint()">💡</button></span>
+            <span><button onclick="getHint()">💡</button></span>
+        </h3>
+        <h5><button onclick="initGame(gLevel[0].SIZE)">Beginner lvl</button></h5>
+        <h5><button onclick="initGame(gLevel[1].SIZE)">Medium lvl</button></h5>
+        <h5><button onclick="initGame(gLevel[2].SIZE)">Expert lvl</button></h5>
+    </div>
+
+    <div class="board-container"></div>
+    <div class="scoreBoard">
+        <h3>Beginner lvl HighScore : <span id="Beginner"></span></h3>
+        <h3>Medium lvl HighScore : <span id="Medium"></span></h3>
+        <h3>Expert lvl HighScore : <span id="Expert"></span></h3>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
